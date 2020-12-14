@@ -88,6 +88,15 @@
             mobileNoError.textContent= "";
             else mobileNoError.textContent="Invalid Mobile No.";
         });
+
+        const password = document.querySelector('#password');
+        const passwordError = document.querySelector('.password-error');
+        password.addEventListener('input', function(){
+            let passwordRegex = RegExp('^(?=.*\\d)(?=.*[A-Z])(?=.*\\W)(?!.*\\W\\w*\\W)(?!.*\\s).{8,}$');
+            if(passwordRegex.test(password.value))
+            passwordError.textContent = "";
+            else passwordError.textContent="Invalid Password.";
+        });
     </script>
 </body>
 </html>
