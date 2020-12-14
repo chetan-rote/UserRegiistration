@@ -1,5 +1,6 @@
 html, input{
     font-family: sans-serif;
+    display: flex;
 }
 body{
     width: 100%;
